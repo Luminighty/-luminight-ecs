@@ -1,9 +1,9 @@
-import { COMPONENT_ID, Component, ComponentClass } from "../component";
+import { COMPONENT_ID, IComponent, ComponentClass } from "../component";
 
 export type EntityId = number
 
 export class Entity {
-	public components: Component[] = []
+	public components: IComponent[] = []
 	public meta: object = {}
 
 	constructor(

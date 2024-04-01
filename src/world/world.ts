@@ -1,4 +1,4 @@
-import { Component, ComponentClass, ComponentContainer } from "../component";
+import { IComponent, ComponentClass, ComponentContainer } from "../component";
 import { EntityQuery } from "../component/container";
 import { Entity, EntityContainer } from "../entity";
 import { EventContext, EventHandler, System, SystemContainer } from "../system";
@@ -12,10 +12,12 @@ export class World {
 
 	// ***** Entities *****
 
-	createEntity(...components: Component[]) {
+	createEntity(...components: IComponent[]) {
 		for (const component of components)
 			this.components.add(component)
-		return this.entities.create(components)
+		const entity = this.entities.create(components)
+		this.emit("onEntityCreated", { entity })
+		return entity
 	}
 
 	// ***** Components *****
@@ -25,7 +27,7 @@ export class World {
 	 * @param component Component to add
 	 * @returns The newly added component, or the already existing one, if the entity already had one
 	 */
-	addComponent(target: Entity, component: Component) {
+	addComponent(target: Entity, component: IComponent) {
 		const targetComponent = target.getComponent(component.constructor as ComponentClass)
 		if (targetComponent)
 			return targetComponent
@@ -33,7 +35,7 @@ export class World {
 		return this.components.add(component)
 	}
 
-	removeComponent(target: Entity, component: Component) {
+	removeComponent(target: Entity, component: IComponent) {
 		const index = target.components.findIndex((c) => c === component)
 		if (index < 0)
 			return
@@ -59,7 +61,6 @@ export class World {
 	}
 
 	emit(event: string, props: EventContext = {}) {
-		props.world = this;
 		this.systems.emit(event, props)
 	}
 

@@ -8,7 +8,7 @@ export type System = SystemSetupFunction | ISystem
 
 export type EventContext = {
 	entity?: Entity,
-	world?: World,
+	[key: string]: any
 }
 
 export type EventHandler = (context: EventContext) => void

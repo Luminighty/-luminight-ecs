@@ -12,7 +12,7 @@ export class SystemContainer {
 	}
 
 	emit(event: string, context: EventContext = {}) {
-		for (const listener of this.events[event]) {
+		for (const listener of this.events[event] ?? []) {
 			listener(context);
 		}
 	}

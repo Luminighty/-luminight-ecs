@@ -1,4 +1,4 @@
-import { COMPONENT_ID, Component, ComponentClass } from ".";
+import { COMPONENT_ID, IComponent, ComponentClass } from ".";
 import { EntityContainer } from "../entity";
 import { MissingComponentIdError } from "./error";
 
@@ -9,9 +9,9 @@ type ComponentTypeTuple<T extends Class<unknown>[]> = {
 export type EntityQuery = AtleastOne<ComponentClass>
 
 export class ComponentContainer {
-	components: {[key: string]: Component[]} = {};
+	components: {[key: string]: IComponent[]} = {};
 
-	add(component: Component) {
+	add(component: IComponent) {
 		const id = component.constructor[COMPONENT_ID]
 		if (!id)
 			throw new MissingComponentIdError(component.constructor)
@@ -21,7 +21,7 @@ export class ComponentContainer {
 		return component
 	}
 
-	remove(component: Component) {
+	remove(component: IComponent) {
 		const id = component.constructor[COMPONENT_ID]
 		if (!id)
 			throw new MissingComponentIdError(component.constructor)

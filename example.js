@@ -24,7 +24,7 @@ prototypes.registerPrototype("Player",
 	{ typeId: "PlayerComponent", props: {} },
 	{ typeId: "PositionComponent", props: { x: 10, y: 5 } },
 )
-
+/*
 const parser = new XmlPrototypeParser();
 prototypes.registerPrototype(
 	parser.parse(`
@@ -34,17 +34,23 @@ prototypes.registerPrototype(
 		</Entity>
 	`)
 )
+*/
 world.injectDependency(prototypes)
 prototypes.world = world
 const player = prototypes.createEntity("Player")
 console.log(player)
-console.log(prototypes.createEntity("Dummy"))
+// console.log(prototypes.createEntity("Dummy"))
 
+
+class DeltaTime { dt = 0 }
+const deltaTime = new DeltaTime()
 
 world.injectDependency(deltaTime)
+
 // function type system
 world.addSystem((world) => {
 	const time = world.getDependency(DeltaTime)
+	console.log("Elapsed time:", time.dt)
 
 	world.listen("onUpdate", (context) => {
 		console.log("Elapsed time:", time.dt)
@@ -75,8 +81,6 @@ class PlayerUpdateSystem {
 }
 world.addSystem(new PlayerUpdateSystem())
 
-class DeltaTime { dt = 0 }
-const deltaTime = new DeltaTime()
 deltaTime.dt += 1;
 
 world.emit("onUpdate")
