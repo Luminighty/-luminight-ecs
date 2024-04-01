@@ -1,12 +1,15 @@
-const { World, PrototypeRegistry, XmlPrototypeParser } = require("./dist")
+const { World, PrototypeRegistry, Component } = require("./dist")
 
 const world = new World()
 
-class PlayerComponent { static COMPONENT_ID = "PlayerComponent" }
-class PositionComponent { static COMPONENT_ID = "PositionComponent"; 
+class PlayerComponent { }
+class PositionComponent {
 	x = 0; y = 0 ;
 	get position() { return { x: this.x, y: this.y }}
 }
+Component("PlayerComponent")(PlayerComponent)
+Component("PositionComponent")(PositionComponent)
+
 
 // Creating entities from components
 const entity = world.createEntity(

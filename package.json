@@ -1,11 +1,16 @@
 {
   "name": "@luminight/ecs",
-  "version": "0.8.0",
+  "version": "0.8.2",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
+    "clean": "rm -r -d dist/",
     "example": "node example.js",
     "build": "tsc"
+  },
+  "repository": {
+    "url": "https://github.com/Luminighty/luminight-ecs"
   },
   "author": "Luminight (http://luminight.dev/)",
   "license": "ISC",

@@ -1,5 +1,5 @@
-import { Entity, EntityId } from "../entity/entity"
-export { ComponentContainer, EntityQuery } from "./container"
+import { EntityId } from "../entity/entity"
+export { ComponentContainer, EntityQuery, ComponentTypeTuple } from "./container"
 
 export interface IComponent {
 	parent?: EntityId,
@@ -13,3 +13,11 @@ export interface ComponentClass<T = IComponent> {
 
 
 export const COMPONENT_ID = "COMPONENT_ID" as const;
+
+
+export function Component(componentId: string) {
+	return function<T extends Function>(constructor: T) {
+		constructor[COMPONENT_ID] = componentId
+		return constructor
+	}
+}
