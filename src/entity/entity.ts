@@ -10,12 +10,6 @@ export class Entity {
 		public uuid: EntityId,
 	) {}
 
-	emit(event, context = {}) {
-		for (const component of this.components) {
-			component[event]?.(context)
-		}
-	}
-
 	getComponent<T>(componentType: ComponentClass<T>): T {
 		return this.components.find((component) => 
 			componentType.COMPONENT_ID === component.constructor[COMPONENT_ID]

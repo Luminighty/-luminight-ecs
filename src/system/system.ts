@@ -11,5 +11,4 @@ export type EventContext = {
 	world?: World,
 }
 
-
 export type EventHandler = (context: EventContext) => void
