@@ -1,24 +1,75 @@
-import { ComponentContainer } from "../component";
+import { Component, ComponentClass, ComponentContainer } from "../component";
+import { EntityQuery } from "../component/container";
 import { Entity, EntityContainer } from "../entity";
-import { DependencyHandler } from "./dependency";
+import { EventContext, EventHandler, System, SystemContainer } from "../system";
+import { DependencyContainer } from "../dependency";
 
 export class World {
-	dependencies = new DependencyHandler()
+	dependencies = new DependencyContainer()
 	components = new ComponentContainer()
 	entities = new EntityContainer()
+	systems = new SystemContainer()
 
-	inject(dependency, key?) {
-		this.dependencies.add(dependency, key);
+	// ***** Entities *****
+
+	createEntity(...components: Component[]) {
+		for (const component of components)
+			this.components.add(component)
+		return this.entities.create(components)
 	}
 
-	createEntity(...components) {
+	// ***** Components *****
+
+	/**
+	 * @param target The entity the component is being added to
+	 * @param component Component to add
+	 * @returns The newly added component, or the already existing one, if the entity already had one
+	 */
+	addComponent(target: Entity, component: Component) {
+		const targetComponent = target.getComponent(component.constructor as ComponentClass)
+		if (targetComponent)
+			return targetComponent
+		target.components.push(component)
+		return this.components.add(component)
 	}
 
-	addSystem(system) {
-
+	removeComponent(target: Entity, component: Component) {
+		const index = target.components.findIndex((c) => c === component)
+		if (index < 0)
+			return
+		target.components.splice(index, 1)
+		this.components.remove(component)
 	}
 
-	emit(event: string, props = {}) {
+	query<T extends EntityQuery>(...types: T) {
+		return this.components.query(this.entities, ...types)
+	}
 
+	// ***** Systems *****
+
+	addSystem(system: System) {
+		if (typeof(system) == "function")
+			return system(this)
+		system["world"] = this
+		system["setup"](this)
+	}
+
+	listen(event: string, handler: EventHandler) {
+		this.systems.listen(event, handler)
+	}
+
+	emit(event: string, props: EventContext = {}) {
+		props.world = this;
+		this.systems.emit(event, props)
+	}
+
+	// ***** Dependencies *****
+
+	injectDependency(dependency: Object) {
+		this.dependencies.add(dependency);
+	}
+
+	getDependency<T>(key: (new (...args: unknown[]) => T)): T {
+		return this.dependencies.get(key)
 	}
 }

@@ -1,19 +1,20 @@
 {
 	"compilerOptions": {
-			"outDir": "./dist/",
-			"sourceMap": true,
-			"strict": true,
-			"noImplicitReturns": true,
-			"noImplicitAny": false,
-			"module": "es6",
-			"moduleResolution": "node",
-			"target": "es6",
-			"allowJs": true,
-			"allowSyntheticDefaultImports": true,
-			"experimentalDecorators": true
+		"outDir": "./dist/",
+		"sourceMap": true,
+		"strict": true,
+		"noImplicitReturns": true,
+		"noImplicitAny": false,
+		"module": "CommonJS",
+		"moduleResolution": "node",
+		"target": "es6",
+		"allowJs": true,
+		"allowSyntheticDefaultImports": true,
+		"experimentalDecorators": true,
+		"esModuleInterop": true
 	},
 	"include": [
-			"./src/index.ts",
-			"./src/**/*"
+		"./src/index.ts",
+		"./src/**/*",
 	]
 }

@@ -1,22 +1,44 @@
-import { Component } from ".";
-import { Entity } from "../entity/entity";
+import { COMPONENT_ID, Component, ComponentClass } from ".";
+import { EntityContainer } from "../entity";
+import { MissingComponentIdError } from "./error";
 
 type ComponentTypeTuple<T extends Class<unknown>[]> = {
-  [K in keyof T]: T[K] extends Class<infer V> ? V[] : never
+  [K in keyof T]: T[K] extends Class<infer V> ? V : never
 };
+
+export type EntityQuery = AtleastOne<ComponentClass>
 
 export class ComponentContainer {
 	components: {[key: string]: Component[]} = {};
 
-	query<T extends AtleastOne<Class<unknown>>>(...types: T): ComponentTypeTuple<T> {
+	add(component: Component) {
+		const id = component.constructor[COMPONENT_ID]
+		if (!id)
+			throw new MissingComponentIdError(component.constructor)
+		if (!this.components[id])
+			this.components[id] = []
+		this.components[id].push(component)
+		return component
+	}
 
+	remove(component: Component) {
+		const id = component.constructor[COMPONENT_ID]
+		if (!id)
+			throw new MissingComponentIdError(component.constructor)
+		if (!this.components[id])
+			return
+		const index = this.components[id].findIndex((c) => c === component)
+		if (index < 0)
+			return
+		this.components[id].splice(index, 1)
+	}
+
+	query<T extends EntityQuery>(entities: EntityContainer, ...types: T): ComponentTypeTuple<T>[] {
 		// [T1[], T2[], T3[], T4[], ...]
-		const groups = types.map((c) => this.components[c["COMPONENT_ID"]] ?? []);
+		const groups = types.map((c) => this.components[c.COMPONENT_ID!] ?? []);
 
-		if (groups.length === 0)
-			return [...types.map(() => [])] as ComponentTypeTuple<T>;
 		if (groups.length === 1)
-			return groups as ComponentTypeTuple<T>;
+			return groups[0] as ComponentTypeTuple<T>[]
 
 		// Start from the smallest group, we can't have more entities than that
 		let smallestGroup = groups[0];
@@ -25,21 +47,17 @@ export class ComponentContainer {
 				smallestGroup = group;
 		}
 		if (smallestGroup.length === 0)
-			return [...types.map(() => [])] as ComponentTypeTuple<T>;
+			return [];
 
 		const possibleEntities = smallestGroup.map((component) => component.parent);
 		const res = possibleEntities
-			.map((entity) => types.map((type) => entity!.getComponent(type)))
+			.map((entity) => types.map((type) => entities.get(entity!).getComponent(type)))
 			.filter((components) => components.every((c) => c));
 			
 		if (res.length === 0)
-			return [...types.map(() => [])] as ComponentTypeTuple<T>;
+			return [];
 			
-		return transpose(res) as ComponentTypeTuple<T>;
+		return res as ComponentTypeTuple<T>[]
 	}
 
-}
-
-function transpose(arr) {
-  return arr[0].map((_, i) => arr.map(row => row[i]));
 }

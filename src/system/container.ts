@@ -1,23 +1,20 @@
-import { Entity } from "../entity"
-import { System } from "./system"
+import { EventContext, EventHandler, System } from "./system"
 
-type EventSystems = Record<string, System[]>
-
-type EventContext = {
-	entity: Entity,
-}
-
-type EventHandler = (context: EventContext, ...components: unknown[]) => void
+type EventSystem = Record<string, EventHandler[]>
 
 export class SystemContainer {
-	events: EventSystems = {}
+	events: EventSystem = {}
 
-	listen(handler: EventHandler) {
-
+	listen(key: string, handler: EventHandler) {
+		if (!this.events[key])
+			this.events[key] = [];
+		this.events[key].push(handler)
 	}
 
-	emit(event, context={}) {
-		
+	emit(event: string, context: EventContext = {}) {
+		for (const listener of this.events[event]) {
+			listener(context);
+		}
 	}
 
 }
