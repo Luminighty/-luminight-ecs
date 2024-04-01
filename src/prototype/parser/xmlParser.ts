@@ -6,17 +6,16 @@ type ComponentParser = (component: Element) => object
 type AttributeParser = (value: string) => unknown
 
 export class XmlPrototypeParser implements IPrototypeParser {
-	private parser = new DOMParser()
 
 	constructor(
+		private parser: (data: string) => HTMLElement,
 		private componentParser: Record<string, ComponentParser> = {},
 		private attributeParser: Record<string, Record<string, AttributeParser> | AttributeParser> = {},
 	) {
 	}
 	
 	parse(data: string): [PrototypeKey, ComponentPrototype[]] {
-		const entityDoc = this.parser.parseFromString(data, "text/xml");
-		const root = entityDoc.documentElement;
+		const root = this.parser(data);
 	
 		const id = root.getAttribute("id")!;
 		const components: ComponentPrototype[] = [];

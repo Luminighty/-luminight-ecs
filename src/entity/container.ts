@@ -20,4 +20,12 @@ export class EntityContainer {
 	get(id: EntityId) {
 		return this.entities[id]
 	}
+
+	delete(entity: Entity) {
+		delete this.entities[entity.uuid]
+	}
+
+	length() {
+		return Object.values(this.entities).length
+	}
 }

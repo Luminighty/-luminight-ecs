@@ -1,17 +1,19 @@
+import { DEPENDENCY_ID } from "."
 import { MissingDependencyError } from "./error"
 
 export class DependencyContainer {
 	dependencies: Record<string, Object> = {}
 
-	add(dependency: Object) {
-		this.dependencies[dependency.constructor.name] = dependency
+	add<T extends Object>(dependency: T): T {
+		const key = dependency.constructor[DEPENDENCY_ID] ?? dependency.constructor.name
+		if (this.dependencies[key])
+			return this.dependencies[key] as T
+		this.dependencies[key] = dependency
+		return dependency
 	}
 
 	get<T>(type: Class<T>): T {
-		const dependency = this.dependencies[type.name]
-		if (!dependency)
-			throw new MissingDependencyError(type, type.name)
-		return this.dependencies[type.name] as T
+		return this.getByKey(type[DEPENDENCY_ID] ?? type.name) as T
 	}
 
 	getByKey(key: string) {

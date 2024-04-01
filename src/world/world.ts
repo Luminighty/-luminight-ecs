@@ -20,6 +20,12 @@ export class World {
 		return entity
 	}
 
+	deleteEntity(entity: Entity) {
+		for (const component of entity.components)
+			this.components.remove(component)
+		this.entities.delete(entity)
+	}
+
 	// ***** Components *****
 
 	/**
@@ -66,11 +72,13 @@ export class World {
 
 	// ***** Dependencies *****
 
-	injectDependency(dependency: Object) {
-		this.dependencies.add(dependency);
+	injectDependency<T extends Object>(dependency: T): T {
+		return this.dependencies.add(dependency)
 	}
 
-	getDependency<T>(key: (new (...args: unknown[]) => T)): T {
+	getDependency<T>(key: (new (...args: unknown[]) => T) | string): T {
+		if (typeof(key) === "string")
+			return this.dependencies.getByKey(key) as T
 		return this.dependencies.get(key)
 	}
 }

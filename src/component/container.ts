@@ -36,7 +36,7 @@ export class ComponentContainer {
 
 	query<T extends EntityQuery>(entities: EntityContainer, ...types: T): ComponentTypeTuple<T>[] {
 		// [T1[], T2[], T3[], T4[], ...]
-		const groups = types.map((c) => this.components[c.COMPONENT_ID!] ?? []);
+		const groups = types.map((c) => this.components[c[COMPONENT_ID]!] ?? []);
 
 		if (groups.length === 1)
 			return groups[0] as ComponentTypeTuple<T>[]
