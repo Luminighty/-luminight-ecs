@@ -1,4 +1,5 @@
 import { DEPENDENCY_ID } from "."
+import { Class } from "../utils/types"
 import { MissingDependencyError } from "./error"
 
 export class DependencyContainer {

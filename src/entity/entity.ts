@@ -1,9 +1,10 @@
 import { COMPONENT_ID, IComponent, ComponentClass } from "../component";
+import { MissingComponentIdError } from "../component/error";
 
 export type EntityId = number
 
 export class Entity {
-	public components: IComponent[] = []
+	public components: {[key: string]: IComponent} = {}
 	public meta: object = {}
 
 	constructor(
@@ -11,21 +12,15 @@ export class Entity {
 	) {}
 
 	getComponent<T>(componentType: ComponentClass<T>): T {
-		return this.components.find((component) => 
-			componentType.COMPONENT_ID === component.constructor[COMPONENT_ID]
-		) as T;
+		return this.components[componentType.COMPONENT_ID!] as T
 	}
 	
 	getComponentByTypeId<T>(componentTypeId: string): T {
-		return this.components.find((component) => 
-			componentTypeId === component.constructor[COMPONENT_ID]
-		) as T;
+		return this.components[componentTypeId] as T
 	}
 
 	hasComponent(componentType: ComponentClass) {
-		return this.components.findIndex((component) => 
-		componentType.COMPONENT_ID === component.constructor[COMPONENT_ID]
-		) >= 0
+		return Boolean(this.components[componentType.COMPONENT_ID!])
 	}
 
 }

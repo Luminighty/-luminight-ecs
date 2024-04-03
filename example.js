@@ -79,6 +79,7 @@ class PlayerUpdateSystem {
 		const entities = this.world.query(PlayerComponent, PositionComponent)
 		for (const [_, position] of entities) {
 			console.log("Class type: ", position.position)
+			position.parent
 		}
 	}
 }

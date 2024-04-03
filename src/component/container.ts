@@ -1,10 +1,11 @@
 import { COMPONENT_ID, IComponent, ComponentClass } from ".";
 import { EntityContainer } from "../entity";
+import { AtleastOne } from "../utils/types";
 import { MissingComponentIdError } from "./error";
 
 
 export type ComponentTypeTuple<T extends ComponentClass[]> = {
-    [K in keyof T]: T[K] extends ComponentClass<infer V> ? V : never;
+    [K in keyof T]: T[K] extends ComponentClass<infer V> ? (V & IComponent) : never;
 };
 
 export type EntityQuery = AtleastOne<ComponentClass>

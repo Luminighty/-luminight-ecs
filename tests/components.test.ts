@@ -13,7 +13,7 @@ test("adding components", () => {
 	const position = world.addComponent(player, new Position())
 	position.x = 10
 
-	expect(player.components).toHaveLength(1)
+	expect(Object.keys(player.components)).toHaveLength(1)
 
 	expect(player.hasComponent(Position)).toBe(true)
 	expect(player.hasComponent(Player)).toBe(false)

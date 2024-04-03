@@ -3,6 +3,7 @@ import { EntityQuery } from "../component/container";
 import { Entity, EntityContainer } from "../entity";
 import { EventContext, EventHandler, System, SystemContainer } from "../system";
 import { DependencyContainer } from "../dependency";
+import { EntityId } from "../entity/entity";
 
 export class World {
 	dependencies = new DependencyContainer()
@@ -21,9 +22,14 @@ export class World {
 	}
 
 	deleteEntity(entity: Entity) {
-		for (const component of entity.components)
+		this.emit("onEntityDeleted", { entity })
+		for (const component of Object.values(entity.components))
 			this.components.remove(component)
 		this.entities.delete(entity)
+	}
+
+	getEntity(entity: EntityId): Entity {
+		return this.entities.get(entity)
 	}
 
 	// ***** Components *****
@@ -37,16 +43,21 @@ export class World {
 		const targetComponent = target.getComponent(component.constructor as ComponentClass)
 		if (targetComponent)
 			return targetComponent
-		target.components.push(component)
+		const id = (component.constructor as ComponentClass).COMPONENT_ID
+		target.components[id!] = component
 		return this.components.add(component)
 	}
 
 	removeComponent(target: Entity, component: IComponent) {
-		const index = target.components.findIndex((c) => c === component)
-		if (index < 0)
+		const id = (component.constructor as ComponentClass).COMPONENT_ID as string
+		if (!target.components[id])
 			return
-		target.components.splice(index, 1)
+		delete target.components[id]
 		this.components.remove(component)
+	}
+
+	hasComponent(target: Entity, componentClass: ComponentClass<IComponent>) {
+		return target.hasComponent(componentClass)
 	}
 
 	query<T extends EntityQuery>(...types: T) {
