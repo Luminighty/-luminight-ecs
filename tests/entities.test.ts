@@ -14,8 +14,8 @@ test("creating entity", () => {
 	const positionComponent = new Position()
 
 	const player = world.createEntity(playerComponent, positionComponent)
-	expect(player.getComponent(Player)).toBe(playerComponent)
-	expect(player.getComponent(Position)).toBe(positionComponent)
+	expect(world.getComponent(player, Player)).toBe(playerComponent)
+	expect(world.getComponent(player, Position)).toBe(positionComponent)
 
 })
 
@@ -32,8 +32,8 @@ test("creating multiple entities", () => {
 	const player = world.createEntity(playerComponent, positionComponent)
 	const other = world.createEntity(otherPositionComponent)
 
-	expect(player.getComponent(Position)).toBe(positionComponent)
-	expect(other.getComponent(Position)).toBe(otherPositionComponent)
+	expect(world.getComponent(player, Position)).toBe(positionComponent)
+	expect(world.getComponent(other, Position)).toBe(otherPositionComponent)
 })
 
 
@@ -43,13 +43,14 @@ test("same component reference", () => {
 	const position = new Position()
 	const player = world.createEntity(position)
 
-	const change = player.getComponent(Position)
+	const change = world.getComponent(player, Position)
 	change.x = 2
 	change.y = 3
 
 	expect(position.x).toBe(2)
 	expect(position.y).toBe(3)
 })
+
 
 test("deleting entity", () => {
 	const world = new World()
@@ -68,6 +69,7 @@ test("deleting entity", () => {
 	expect(world.query(Foo)).toHaveLength(1)
 
 	world.deleteEntity(player)
+	world.maintain()
 
 	expect(world.entities.length()).toBe(3)
 	expect(world.query(Player)).toHaveLength(1)

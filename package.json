@@ -1,6 +1,6 @@
 {
   "name": "@luminight/ecs",
-  "version": "0.9.3",
+  "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -8,7 +8,8 @@
     "clean": "rm -r -d dist/",
     "example": "node example.js",
     "build": "tsc",
-    "test": "jest"
+    "test": "jest --runInBand",
+    "prepublishOnly": "npm run clean && npm run build && npm test"
   },
   "repository": {
     "url": "https://github.com/Luminighty/luminight-ecs"

@@ -1,13 +1,11 @@
-import { Component, World } from "./src";
+import { Component, Entities, World } from "./src";
 
 const world = new World()
 
 // Components
 
-@Component("PlayerComponent")
 class PlayerComponent {}
 
-@Component("PositionComponent")
 class PositionComponent { x = 0; y = 0 }
 
 // Entity
@@ -25,6 +23,12 @@ world.addSystem((world) => {
 
 // player: PlayerComponent
 // position: PositionComponent
+for (const [entities, player, position] of world.query(Entities, PlayerComponent, PositionComponent)) {
+	console.log("Player's position: ", position.x)
+}
+
+// player: PlayerComponent
+// position: PositionComponent
 for (const [player, position] of world.query(PlayerComponent, PositionComponent)) {
-	console.log("Player's position: ", position)
+	console.log("Player's position: ", position.x)
 }

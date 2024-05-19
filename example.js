@@ -1,4 +1,4 @@
-const { World, PrototypeRegistry, Component } = require("./dist")
+const { World, PrototypeRegistry, Component, Entities } = require("./dist");
 
 const world = new World()
 
@@ -18,6 +18,9 @@ const entity = world.createEntity(
 )
 console.log(entity)
 
+for (const [entity, player] of world.query(Entities, PositionComponent, PlayerComponent)) {
+	
+}
 
 const prototypes = new PrototypeRegistry();
 

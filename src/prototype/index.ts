@@ -43,7 +43,6 @@ export class PrototypeRegistry {
 		})
 
 		const entity = this.world.createEntity(...components)
-		entity.meta["prototype"] = prototype
 		return entity
 	}
 

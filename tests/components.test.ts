@@ -1,4 +1,4 @@
-import { World, Component } from "../src"
+import { World, Component, Entities } from "../src"
 
 @Component("Position")
 class Position { x = 0; y = 0 }
@@ -6,11 +6,13 @@ class Position { x = 0; y = 0 }
 @Component("Player")
 class Player { }
 
+
 test("adding components", () => {
 	const world = new World();
-	const player = world.createEntity()
+	const playerId = world.createEntity()
+	const player = world.entities.get(playerId)
 
-	const position = world.addComponent(player, new Position())
+	const position = world.addComponent(playerId, new Position())
 	position.x = 10
 
 	expect(Object.keys(player.components)).toHaveLength(1)
@@ -20,26 +22,30 @@ test("adding components", () => {
 
 })
 
+
 test("removing components", () => {
 	const world = new World();
 
-	const position = new Position()
-	
+	const position = new Position()	
 	const player = world.createEntity(
 		position,
 		new Player()
 	)
 
-	world.removeComponent(player, position)
+	world.removeComponent(position)
+	world.maintain()
 
-	expect(player.hasComponent(Position)).toBe(false)
-	expect(player.hasComponent(Player)).toBe(true)
+	expect(world.hasComponent(player, Position)).toBe(false)
+	expect(world.hasComponent(player, Player)).toBe(true)
 
-	world.removeComponent(player, position)
-	expect(player.hasComponent(Position)).toBe(false)
-	expect(player.hasComponent(Player)).toBe(true)
+	world.removeComponent(position)
+	world.maintain()
+
+	expect(world.hasComponent(player, Position)).toBe(false)
+	expect(world.hasComponent(player, Player)).toBe(true)
 
 })
+
 
 test("querying components", () => {
 	const world = new World();
@@ -54,9 +60,9 @@ test("querying components", () => {
 
 	const playerB = new Player();
 
-	world.createEntity(positionA)
-	world.createEntity(positionB, playerB)
-	world.createEntity(positionC)
+	const posAEntity = world.createEntity(positionA)
+	const playerEntity = world.createEntity(positionB, playerB)
+	const posCEntity = world.createEntity(positionC)
 
 	const positions = world.query(Position)
 	expect(positions).toEqual(expect.arrayContaining([positionA]))
@@ -66,6 +72,18 @@ test("querying components", () => {
 	const players = world.query(Player)
 	expect(players).toEqual(expect.arrayContaining([playerB]))
 
-	const entities = world.query(Player, Position)
-	expect(entities).toEqual([[playerB, positionB]])
+	{
+		const entities = world.query(Player, Position)
+		expect(entities).toEqual([[playerB, positionB]])
+	}
+	
+	{
+		const entities = world.query(Entities, Player, Position)
+		expect(entities).toEqual([[playerEntity, playerB, positionB]])
+	}
+	
+	{
+		const entities = world.query(Entities)
+		expect(entities).toEqual([[posAEntity], [playerEntity], [posCEntity]])
+	}
 })

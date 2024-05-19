@@ -1,5 +1,4 @@
-import { COMPONENT_ID, IComponent, ComponentClass } from "../component";
-import { MissingComponentIdError } from "../component/error";
+import { IComponent, ComponentClass } from "../component";
 
 export type EntityId = number
 

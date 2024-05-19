@@ -1,2 +1,2 @@
-export { Entity } from "./entity"
+export { Entity, EntityId } from "./entity"
 export { EntityContainer } from "./container"

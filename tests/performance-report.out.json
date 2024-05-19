@@ -1,0 +1,1839 @@
+{
+  "date": "2024-05-19T14:21:26.570Z",
+  "ENTITIES_CREATE": {
+    "params": {
+      "entityAmount": 1000
+    },
+    "avg": 0.31322649000000186,
+    "min": 0.16250700000000506,
+    "minIndex": 70,
+    "max": 3.9288970000000063,
+    "maxIndex": 16,
+    "report": [
+      {
+        "name": "creating-entities-0",
+        "entryType": "measure",
+        "startTime": 1770.868953,
+        "duration": 1.127006000000165
+      },
+      {
+        "name": "creating-entities-1",
+        "entryType": "measure",
+        "startTime": 1772.235804,
+        "duration": 1.4691060000000107
+      },
+      {
+        "name": "creating-entities-2",
+        "entryType": "measure",
+        "startTime": 1773.786806,
+        "duration": 1.57511599999998
+      },
+      {
+        "name": "creating-entities-3",
+        "entryType": "measure",
+        "startTime": 1775.397922,
+        "duration": 1.1100709999998344
+      },
+      {
+        "name": "creating-entities-4",
+        "entryType": "measure",
+        "startTime": 1776.553601,
+        "duration": 0.5461029999999027
+      },
+      {
+        "name": "creating-entities-5",
+        "entryType": "measure",
+        "startTime": 1777.147786,
+        "duration": 0.8268729999999778
+      },
+      {
+        "name": "creating-entities-6",
+        "entryType": "measure",
+        "startTime": 1778.029478,
+        "duration": 0.8770280000001094
+      },
+      {
+        "name": "creating-entities-7",
+        "entryType": "measure",
+        "startTime": 1778.942555,
+        "duration": 0.4522190000000137
+      },
+      {
+        "name": "creating-entities-8",
+        "entryType": "measure",
+        "startTime": 1779.517954,
+        "duration": 0.45683600000006663
+      },
+      {
+        "name": "creating-entities-9",
+        "entryType": "measure",
+        "startTime": 1780.243269,
+        "duration": 0.4510969999998906
+      },
+      {
+        "name": "creating-entities-10",
+        "entryType": "measure",
+        "startTime": 1780.730134,
+        "duration": 0.46678700000006756
+      },
+      {
+        "name": "creating-entities-11",
+        "entryType": "measure",
+        "startTime": 1781.212741,
+        "duration": 0.4387569999998959
+      },
+      {
+        "name": "creating-entities-12",
+        "entryType": "measure",
+        "startTime": 1781.660179,
+        "duration": 0.43903900000009344
+      },
+      {
+        "name": "creating-entities-13",
+        "entryType": "measure",
+        "startTime": 1782.108802,
+        "duration": 0.4450899999999365
+      },
+      {
+        "name": "creating-entities-14",
+        "entryType": "measure",
+        "startTime": 1782.582973,
+        "duration": 0.515615999999909
+      },
+      {
+        "name": "creating-entities-15",
+        "entryType": "measure",
+        "startTime": 1783.1165,
+        "duration": 0.45529899999996815
+      },
+      {
+        "name": "creating-entities-16",
+        "entryType": "measure",
+        "startTime": 1783.583605,
+        "duration": 3.9288970000000063
+      },
+      {
+        "name": "creating-entities-17",
+        "entryType": "measure",
+        "startTime": 1787.536543,
+        "duration": 0.3772350000001552
+      },
+      {
+        "name": "creating-entities-18",
+        "entryType": "measure",
+        "startTime": 1787.92342,
+        "duration": 0.21444999999994252
+      },
+      {
+        "name": "creating-entities-19",
+        "entryType": "measure",
+        "startTime": 1788.145842,
+        "duration": 0.18994500000007974
+      },
+      {
+        "name": "creating-entities-20",
+        "entryType": "measure",
+        "startTime": 1788.341358,
+        "duration": 0.1659300000001167
+      },
+      {
+        "name": "creating-entities-21",
+        "entryType": "measure",
+        "startTime": 1788.510808,
+        "duration": 0.16776899999990746
+      },
+      {
+        "name": "creating-entities-22",
+        "entryType": "measure",
+        "startTime": 1788.681808,
+        "duration": 0.16542699999990873
+      },
+      {
+        "name": "creating-entities-23",
+        "entryType": "measure",
+        "startTime": 1788.850692,
+        "duration": 0.1638150000001133
+      },
+      {
+        "name": "creating-entities-24",
+        "entryType": "measure",
+        "startTime": 1789.017391,
+        "duration": 0.17660299999988638
+      },
+      {
+        "name": "creating-entities-25",
+        "entryType": "measure",
+        "startTime": 1789.197732,
+        "duration": 0.16586999999981344
+      },
+      {
+        "name": "creating-entities-26",
+        "entryType": "measure",
+        "startTime": 1789.366394,
+        "duration": 0.16473100000007435
+      },
+      {
+        "name": "creating-entities-27",
+        "entryType": "measure",
+        "startTime": 1789.534445,
+        "duration": 0.16437599999994745
+      },
+      {
+        "name": "creating-entities-28",
+        "entryType": "measure",
+        "startTime": 1789.702016,
+        "duration": 0.1632680000000164
+      },
+      {
+        "name": "creating-entities-29",
+        "entryType": "measure",
+        "startTime": 1789.868173,
+        "duration": 0.16458299999999326
+      },
+      {
+        "name": "creating-entities-30",
+        "entryType": "measure",
+        "startTime": 1790.035599,
+        "duration": 0.16313199999990502
+      },
+      {
+        "name": "creating-entities-31",
+        "entryType": "measure",
+        "startTime": 1790.201595,
+        "duration": 0.1633480000000418
+      },
+      {
+        "name": "creating-entities-32",
+        "entryType": "measure",
+        "startTime": 1790.367784,
+        "duration": 0.16593299999999545
+      },
+      {
+        "name": "creating-entities-33",
+        "entryType": "measure",
+        "startTime": 1790.536638,
+        "duration": 0.16549699999995937
+      },
+      {
+        "name": "creating-entities-34",
+        "entryType": "measure",
+        "startTime": 1790.705006,
+        "duration": 0.16463199999998324
+      },
+      {
+        "name": "creating-entities-35",
+        "entryType": "measure",
+        "startTime": 1790.872515,
+        "duration": 0.16332899999997608
+      },
+      {
+        "name": "creating-entities-36",
+        "entryType": "measure",
+        "startTime": 1791.038632,
+        "duration": 0.1651600000000144
+      },
+      {
+        "name": "creating-entities-37",
+        "entryType": "measure",
+        "startTime": 1791.206601,
+        "duration": 0.1630249999998341
+      },
+      {
+        "name": "creating-entities-38",
+        "entryType": "measure",
+        "startTime": 1791.372411,
+        "duration": 0.1654559999999492
+      },
+      {
+        "name": "creating-entities-39",
+        "entryType": "measure",
+        "startTime": 1791.540786,
+        "duration": 0.1643619999999828
+      },
+      {
+        "name": "creating-entities-40",
+        "entryType": "measure",
+        "startTime": 1791.708244,
+        "duration": 0.1652350000001661
+      },
+      {
+        "name": "creating-entities-41",
+        "entryType": "measure",
+        "startTime": 1791.876299,
+        "duration": 0.16423200000008364
+      },
+      {
+        "name": "creating-entities-42",
+        "entryType": "measure",
+        "startTime": 1792.043455,
+        "duration": 0.1641939999999522
+      },
+      {
+        "name": "creating-entities-43",
+        "entryType": "measure",
+        "startTime": 1792.210472,
+        "duration": 0.16947800000002644
+      },
+      {
+        "name": "creating-entities-44",
+        "entryType": "measure",
+        "startTime": 1792.383752,
+        "duration": 0.16500500000006468
+      },
+      {
+        "name": "creating-entities-45",
+        "entryType": "measure",
+        "startTime": 1792.551645,
+        "duration": 0.16627900000003137
+      },
+      {
+        "name": "creating-entities-46",
+        "entryType": "measure",
+        "startTime": 1792.720783,
+        "duration": 0.16367400000012822
+      },
+      {
+        "name": "creating-entities-47",
+        "entryType": "measure",
+        "startTime": 1792.887315,
+        "duration": 0.1656910000001517
+      },
+      {
+        "name": "creating-entities-48",
+        "entryType": "measure",
+        "startTime": 1793.056048,
+        "duration": 0.17685000000005857
+      },
+      {
+        "name": "creating-entities-49",
+        "entryType": "measure",
+        "startTime": 1793.236704,
+        "duration": 0.16524500000014086
+      },
+      {
+        "name": "creating-entities-50",
+        "entryType": "measure",
+        "startTime": 1793.404857,
+        "duration": 1.40997799999991
+      },
+      {
+        "name": "creating-entities-51",
+        "entryType": "measure",
+        "startTime": 1794.833947,
+        "duration": 0.16956499999992047
+      },
+      {
+        "name": "creating-entities-52",
+        "entryType": "measure",
+        "startTime": 1795.009222,
+        "duration": 0.16635200000018813
+      },
+      {
+        "name": "creating-entities-53",
+        "entryType": "measure",
+        "startTime": 1795.178737,
+        "duration": 0.16512600000010025
+      },
+      {
+        "name": "creating-entities-54",
+        "entryType": "measure",
+        "startTime": 1795.347113,
+        "duration": 0.16453899999987698
+      },
+      {
+        "name": "creating-entities-55",
+        "entryType": "measure",
+        "startTime": 1795.514691,
+        "duration": 0.16462899999987712
+      },
+      {
+        "name": "creating-entities-56",
+        "entryType": "measure",
+        "startTime": 1795.68212,
+        "duration": 0.1647490000000289
+      },
+      {
+        "name": "creating-entities-57",
+        "entryType": "measure",
+        "startTime": 1795.849763,
+        "duration": 0.16272200000003068
+      },
+      {
+        "name": "creating-entities-58",
+        "entryType": "measure",
+        "startTime": 1796.015307,
+        "duration": 0.1634590000001026
+      },
+      {
+        "name": "creating-entities-59",
+        "entryType": "measure",
+        "startTime": 1796.181574,
+        "duration": 0.16460600000004888
+      },
+      {
+        "name": "creating-entities-60",
+        "entryType": "measure",
+        "startTime": 1796.348926,
+        "duration": 0.16404700000020966
+      },
+      {
+        "name": "creating-entities-61",
+        "entryType": "measure",
+        "startTime": 1796.515742,
+        "duration": 0.16660899999988033
+      },
+      {
+        "name": "creating-entities-62",
+        "entryType": "measure",
+        "startTime": 1796.685193,
+        "duration": 0.16606499999988955
+      },
+      {
+        "name": "creating-entities-63",
+        "entryType": "measure",
+        "startTime": 1796.854045,
+        "duration": 0.16487499999993815
+      },
+      {
+        "name": "creating-entities-64",
+        "entryType": "measure",
+        "startTime": 1797.0222,
+        "duration": 0.17847699999992983
+      },
+      {
+        "name": "creating-entities-65",
+        "entryType": "measure",
+        "startTime": 1797.204621,
+        "duration": 0.16450299999996787
+      },
+      {
+        "name": "creating-entities-66",
+        "entryType": "measure",
+        "startTime": 1797.372202,
+        "duration": 0.16399699999988115
+      },
+      {
+        "name": "creating-entities-67",
+        "entryType": "measure",
+        "startTime": 1797.539482,
+        "duration": 0.16372900000010304
+      },
+      {
+        "name": "creating-entities-68",
+        "entryType": "measure",
+        "startTime": 1797.706084,
+        "duration": 0.1634670000000824
+      },
+      {
+        "name": "creating-entities-69",
+        "entryType": "measure",
+        "startTime": 1797.872408,
+        "duration": 0.1645690000000286
+      },
+      {
+        "name": "creating-entities-70",
+        "entryType": "measure",
+        "startTime": 1798.039767,
+        "duration": 0.16250700000000506
+      },
+      {
+        "name": "creating-entities-71",
+        "entryType": "measure",
+        "startTime": 1798.205192,
+        "duration": 0.16521700000021156
+      },
+      {
+        "name": "creating-entities-72",
+        "entryType": "measure",
+        "startTime": 1798.373221,
+        "duration": 0.1652839999999287
+      },
+      {
+        "name": "creating-entities-73",
+        "entryType": "measure",
+        "startTime": 1798.541686,
+        "duration": 0.16500599999994847
+      },
+      {
+        "name": "creating-entities-74",
+        "entryType": "measure",
+        "startTime": 1798.709503,
+        "duration": 0.16402300000004288
+      },
+      {
+        "name": "creating-entities-75",
+        "entryType": "measure",
+        "startTime": 1798.876399,
+        "duration": 0.1639540000001034
+      },
+      {
+        "name": "creating-entities-76",
+        "entryType": "measure",
+        "startTime": 1799.043274,
+        "duration": 0.16471699999988232
+      },
+      {
+        "name": "creating-entities-77",
+        "entryType": "measure",
+        "startTime": 1799.210764,
+        "duration": 0.1634910000000218
+      },
+      {
+        "name": "creating-entities-78",
+        "entryType": "measure",
+        "startTime": 1799.377122,
+        "duration": 0.1635879999998906
+      },
+      {
+        "name": "creating-entities-79",
+        "entryType": "measure",
+        "startTime": 1799.543563,
+        "duration": 0.16333000000008724
+      },
+      {
+        "name": "creating-entities-80",
+        "entryType": "measure",
+        "startTime": 1799.709735,
+        "duration": 0.1686329999999998
+      },
+      {
+        "name": "creating-entities-81",
+        "entryType": "measure",
+        "startTime": 1799.881337,
+        "duration": 0.16326600000002145
+      },
+      {
+        "name": "creating-entities-82",
+        "entryType": "measure",
+        "startTime": 1800.047507,
+        "duration": 0.16351699999995617
+      },
+      {
+        "name": "creating-entities-83",
+        "entryType": "measure",
+        "startTime": 1800.21506,
+        "duration": 0.16394500000001244
+      },
+      {
+        "name": "creating-entities-84",
+        "entryType": "measure",
+        "startTime": 1800.38183,
+        "duration": 0.16372699999988072
+      },
+      {
+        "name": "creating-entities-85",
+        "entryType": "measure",
+        "startTime": 1800.54841,
+        "duration": 0.1643819999999323
+      },
+      {
+        "name": "creating-entities-86",
+        "entryType": "measure",
+        "startTime": 1800.715682,
+        "duration": 0.1641500000000633
+      },
+      {
+        "name": "creating-entities-87",
+        "entryType": "measure",
+        "startTime": 1800.882587,
+        "duration": 0.652225000000044
+      },
+      {
+        "name": "creating-entities-88",
+        "entryType": "measure",
+        "startTime": 1801.547523,
+        "duration": 0.16507500000011532
+      },
+      {
+        "name": "creating-entities-89",
+        "entryType": "measure",
+        "startTime": 1801.716985,
+        "duration": 0.16551699999990888
+      },
+      {
+        "name": "creating-entities-90",
+        "entryType": "measure",
+        "startTime": 1801.885596,
+        "duration": 0.16471799999999348
+      },
+      {
+        "name": "creating-entities-91",
+        "entryType": "measure",
+        "startTime": 1802.053183,
+        "duration": 0.16483799999991788
+      },
+      {
+        "name": "creating-entities-92",
+        "entryType": "measure",
+        "startTime": 1802.220824,
+        "duration": 0.16409199999998236
+      },
+      {
+        "name": "creating-entities-93",
+        "entryType": "measure",
+        "startTime": 1802.387869,
+        "duration": 0.163187999999991
+      },
+      {
+        "name": "creating-entities-94",
+        "entryType": "measure",
+        "startTime": 1802.553921,
+        "duration": 0.16265999999995984
+      },
+      {
+        "name": "creating-entities-95",
+        "entryType": "measure",
+        "startTime": 1802.719367,
+        "duration": 0.16269499999998516
+      },
+      {
+        "name": "creating-entities-96",
+        "entryType": "measure",
+        "startTime": 1802.884832,
+        "duration": 0.16390999999998712
+      },
+      {
+        "name": "creating-entities-97",
+        "entryType": "measure",
+        "startTime": 1803.051614,
+        "duration": 0.16353400000002694
+      },
+      {
+        "name": "creating-entities-98",
+        "entryType": "measure",
+        "startTime": 1803.217983,
+        "duration": 0.18160400000010668
+      },
+      {
+        "name": "creating-entities-99",
+        "entryType": "measure",
+        "startTime": 1803.402712,
+        "duration": 0.16509399999995367
+      }
+    ]
+  },
+  "ENTITIES_DELETE": {
+    "params": {
+      "entityAmount": 1000
+    },
+    "avg": 0.8354813100000024,
+    "min": 0.7072670000000016,
+    "minIndex": 55,
+    "max": 3.686941000000161,
+    "maxIndex": 0,
+    "report": [
+      {
+        "name": "deleting-entities-0",
+        "entryType": "measure",
+        "startTime": 1810.745608,
+        "duration": 3.686941000000161
+      },
+      {
+        "name": "deleting-entities-1",
+        "entryType": "measure",
+        "startTime": 1818.976132,
+        "duration": 3.3538699999999153
+      },
+      {
+        "name": "deleting-entities-2",
+        "entryType": "measure",
+        "startTime": 1826.641065,
+        "duration": 1.038530000000037
+      },
+      {
+        "name": "deleting-entities-3",
+        "entryType": "measure",
+        "startTime": 1829.719701,
+        "duration": 0.8033510000000206
+      },
+      {
+        "name": "deleting-entities-4",
+        "entryType": "measure",
+        "startTime": 1832.077231,
+        "duration": 0.806765999999925
+      },
+      {
+        "name": "deleting-entities-5",
+        "entryType": "measure",
+        "startTime": 1834.628684,
+        "duration": 0.8212530000000697
+      },
+      {
+        "name": "deleting-entities-6",
+        "entryType": "measure",
+        "startTime": 1838.362394,
+        "duration": 1.0012699999999768
+      },
+      {
+        "name": "deleting-entities-7",
+        "entryType": "measure",
+        "startTime": 1841.073017,
+        "duration": 0.8465120000000752
+      },
+      {
+        "name": "deleting-entities-8",
+        "entryType": "measure",
+        "startTime": 1843.632823,
+        "duration": 0.840755000000172
+      },
+      {
+        "name": "deleting-entities-9",
+        "entryType": "measure",
+        "startTime": 1846.22306,
+        "duration": 0.8285490000000664
+      },
+      {
+        "name": "deleting-entities-10",
+        "entryType": "measure",
+        "startTime": 1848.668373,
+        "duration": 0.9502259999999296
+      },
+      {
+        "name": "deleting-entities-11",
+        "entryType": "measure",
+        "startTime": 1851.172615,
+        "duration": 0.7367750000000797
+      },
+      {
+        "name": "deleting-entities-12",
+        "entryType": "measure",
+        "startTime": 1853.491274,
+        "duration": 0.7625610000000052
+      },
+      {
+        "name": "deleting-entities-13",
+        "entryType": "measure",
+        "startTime": 1855.901732,
+        "duration": 0.7174840000000131
+      },
+      {
+        "name": "deleting-entities-14",
+        "entryType": "measure",
+        "startTime": 1858.207768,
+        "duration": 0.716656999999941
+      },
+      {
+        "name": "deleting-entities-15",
+        "entryType": "measure",
+        "startTime": 1862.327519,
+        "duration": 0.7317729999999756
+      },
+      {
+        "name": "deleting-entities-16",
+        "entryType": "measure",
+        "startTime": 1865.263332,
+        "duration": 0.8129149999999754
+      },
+      {
+        "name": "deleting-entities-17",
+        "entryType": "measure",
+        "startTime": 1867.654041,
+        "duration": 0.7779219999999896
+      },
+      {
+        "name": "deleting-entities-18",
+        "entryType": "measure",
+        "startTime": 1869.96958,
+        "duration": 0.7129489999999805
+      },
+      {
+        "name": "deleting-entities-19",
+        "entryType": "measure",
+        "startTime": 1872.193888,
+        "duration": 0.7171499999999469
+      },
+      {
+        "name": "deleting-entities-20",
+        "entryType": "measure",
+        "startTime": 1874.457044,
+        "duration": 0.710444999999936
+      },
+      {
+        "name": "deleting-entities-21",
+        "entryType": "measure",
+        "startTime": 1876.692588,
+        "duration": 0.7411710000001221
+      },
+      {
+        "name": "deleting-entities-22",
+        "entryType": "measure",
+        "startTime": 1878.980498,
+        "duration": 0.7583130000000438
+      },
+      {
+        "name": "deleting-entities-23",
+        "entryType": "measure",
+        "startTime": 1881.317631,
+        "duration": 0.7301240000001599
+      },
+      {
+        "name": "deleting-entities-24",
+        "entryType": "measure",
+        "startTime": 1884.581146,
+        "duration": 0.7344599999998991
+      },
+      {
+        "name": "deleting-entities-25",
+        "entryType": "measure",
+        "startTime": 1886.840905,
+        "duration": 0.7569530000000668
+      },
+      {
+        "name": "deleting-entities-26",
+        "entryType": "measure",
+        "startTime": 1889.113191,
+        "duration": 0.7339280000001054
+      },
+      {
+        "name": "deleting-entities-27",
+        "entryType": "measure",
+        "startTime": 1891.43293,
+        "duration": 0.7627939999999853
+      },
+      {
+        "name": "deleting-entities-28",
+        "entryType": "measure",
+        "startTime": 1893.755342,
+        "duration": 0.7466360000000805
+      },
+      {
+        "name": "deleting-entities-29",
+        "entryType": "measure",
+        "startTime": 1896.062948,
+        "duration": 0.7572000000000116
+      },
+      {
+        "name": "deleting-entities-30",
+        "entryType": "measure",
+        "startTime": 1898.3767,
+        "duration": 0.7627430000000004
+      },
+      {
+        "name": "deleting-entities-31",
+        "entryType": "measure",
+        "startTime": 1900.69967,
+        "duration": 0.7623730000000251
+      },
+      {
+        "name": "deleting-entities-32",
+        "entryType": "measure",
+        "startTime": 1903.012937,
+        "duration": 0.751451999999972
+      },
+      {
+        "name": "deleting-entities-33",
+        "entryType": "measure",
+        "startTime": 1907.182651,
+        "duration": 0.7256909999998697
+      },
+      {
+        "name": "deleting-entities-34",
+        "entryType": "measure",
+        "startTime": 1909.471157,
+        "duration": 0.7532250000001568
+      },
+      {
+        "name": "deleting-entities-35",
+        "entryType": "measure",
+        "startTime": 1911.799399,
+        "duration": 0.7483330000000024
+      },
+      {
+        "name": "deleting-entities-36",
+        "entryType": "measure",
+        "startTime": 1914.082979,
+        "duration": 0.7105799999999363
+      },
+      {
+        "name": "deleting-entities-37",
+        "entryType": "measure",
+        "startTime": 1916.426077,
+        "duration": 0.7724499999999352
+      },
+      {
+        "name": "deleting-entities-38",
+        "entryType": "measure",
+        "startTime": 1918.741217,
+        "duration": 0.7229399999998805
+      },
+      {
+        "name": "deleting-entities-39",
+        "entryType": "measure",
+        "startTime": 1921.020455,
+        "duration": 0.733744999999999
+      },
+      {
+        "name": "deleting-entities-40",
+        "entryType": "measure",
+        "startTime": 1923.334361,
+        "duration": 0.7598709999999755
+      },
+      {
+        "name": "deleting-entities-41",
+        "entryType": "measure",
+        "startTime": 1925.670665,
+        "duration": 1.8953109999999924
+      },
+      {
+        "name": "deleting-entities-42",
+        "entryType": "measure",
+        "startTime": 1929.146552,
+        "duration": 0.733263000000079
+      },
+      {
+        "name": "deleting-entities-43",
+        "entryType": "measure",
+        "startTime": 1931.42338,
+        "duration": 0.7126299999999901
+      },
+      {
+        "name": "deleting-entities-44",
+        "entryType": "measure",
+        "startTime": 1933.67713,
+        "duration": 0.7337259999999333
+      },
+      {
+        "name": "deleting-entities-45",
+        "entryType": "measure",
+        "startTime": 1935.940178,
+        "duration": 0.7133329999999205
+      },
+      {
+        "name": "deleting-entities-46",
+        "entryType": "measure",
+        "startTime": 1938.19816,
+        "duration": 0.7131470000001627
+      },
+      {
+        "name": "deleting-entities-47",
+        "entryType": "measure",
+        "startTime": 1940.509785,
+        "duration": 0.7431699999999637
+      },
+      {
+        "name": "deleting-entities-48",
+        "entryType": "measure",
+        "startTime": 1942.829271,
+        "duration": 0.732866999999942
+      },
+      {
+        "name": "deleting-entities-49",
+        "entryType": "measure",
+        "startTime": 1945.185966,
+        "duration": 0.7580590000000029
+      },
+      {
+        "name": "deleting-entities-50",
+        "entryType": "measure",
+        "startTime": 1948.573841,
+        "duration": 0.7376290000001973
+      },
+      {
+        "name": "deleting-entities-51",
+        "entryType": "measure",
+        "startTime": 1950.827625,
+        "duration": 0.7131380000000718
+      },
+      {
+        "name": "deleting-entities-52",
+        "entryType": "measure",
+        "startTime": 1953.085854,
+        "duration": 0.7421840000001794
+      },
+      {
+        "name": "deleting-entities-53",
+        "entryType": "measure",
+        "startTime": 1955.404033,
+        "duration": 0.7536769999999251
+      },
+      {
+        "name": "deleting-entities-54",
+        "entryType": "measure",
+        "startTime": 1957.805395,
+        "duration": 0.7421150000000125
+      },
+      {
+        "name": "deleting-entities-55",
+        "entryType": "measure",
+        "startTime": 1960.091916,
+        "duration": 0.7072670000000016
+      },
+      {
+        "name": "deleting-entities-56",
+        "entryType": "measure",
+        "startTime": 1962.357394,
+        "duration": 0.7585079999998925
+      },
+      {
+        "name": "deleting-entities-57",
+        "entryType": "measure",
+        "startTime": 1964.681389,
+        "duration": 0.8660820000000058
+      },
+      {
+        "name": "deleting-entities-58",
+        "entryType": "measure",
+        "startTime": 1967.116674,
+        "duration": 0.7417399999999361
+      },
+      {
+        "name": "deleting-entities-59",
+        "entryType": "measure",
+        "startTime": 1970.599478,
+        "duration": 0.7189220000000205
+      },
+      {
+        "name": "deleting-entities-60",
+        "entryType": "measure",
+        "startTime": 1972.842863,
+        "duration": 0.732434000000012
+      },
+      {
+        "name": "deleting-entities-61",
+        "entryType": "measure",
+        "startTime": 1975.108617,
+        "duration": 0.716466999999966
+      },
+      {
+        "name": "deleting-entities-62",
+        "entryType": "measure",
+        "startTime": 1977.393017,
+        "duration": 0.7567109999999957
+      },
+      {
+        "name": "deleting-entities-63",
+        "entryType": "measure",
+        "startTime": 1979.699971,
+        "duration": 0.7380290000000969
+      },
+      {
+        "name": "deleting-entities-64",
+        "entryType": "measure",
+        "startTime": 1982.093794,
+        "duration": 0.8464840000001459
+      },
+      {
+        "name": "deleting-entities-65",
+        "entryType": "measure",
+        "startTime": 1984.51467,
+        "duration": 0.7703670000000784
+      },
+      {
+        "name": "deleting-entities-66",
+        "entryType": "measure",
+        "startTime": 1986.841252,
+        "duration": 0.7159659999999803
+      },
+      {
+        "name": "deleting-entities-67",
+        "entryType": "measure",
+        "startTime": 1989.102992,
+        "duration": 0.7421649999998863
+      },
+      {
+        "name": "deleting-entities-68",
+        "entryType": "measure",
+        "startTime": 1992.387866,
+        "duration": 0.7243530000000646
+      },
+      {
+        "name": "deleting-entities-69",
+        "entryType": "measure",
+        "startTime": 1994.807421,
+        "duration": 0.720939000000044
+      },
+      {
+        "name": "deleting-entities-70",
+        "entryType": "measure",
+        "startTime": 1997.625066,
+        "duration": 0.7311379999998735
+      },
+      {
+        "name": "deleting-entities-71",
+        "entryType": "measure",
+        "startTime": 1999.877434,
+        "duration": 0.7657150000000001
+      },
+      {
+        "name": "deleting-entities-72",
+        "entryType": "measure",
+        "startTime": 2002.184184,
+        "duration": 0.7531739999999445
+      },
+      {
+        "name": "deleting-entities-73",
+        "entryType": "measure",
+        "startTime": 2004.48356,
+        "duration": 0.76481200000012
+      },
+      {
+        "name": "deleting-entities-74",
+        "entryType": "measure",
+        "startTime": 2006.816014,
+        "duration": 0.7530070000000251
+      },
+      {
+        "name": "deleting-entities-75",
+        "entryType": "measure",
+        "startTime": 2009.130995,
+        "duration": 0.7374790000001212
+      },
+      {
+        "name": "deleting-entities-76",
+        "entryType": "measure",
+        "startTime": 2011.417187,
+        "duration": 1.9430950000000848
+      },
+      {
+        "name": "deleting-entities-77",
+        "entryType": "measure",
+        "startTime": 2014.910701,
+        "duration": 0.7677200000000539
+      },
+      {
+        "name": "deleting-entities-78",
+        "entryType": "measure",
+        "startTime": 2017.234674,
+        "duration": 0.7597189999999046
+      },
+      {
+        "name": "deleting-entities-79",
+        "entryType": "measure",
+        "startTime": 2019.575693,
+        "duration": 0.7522890000000189
+      },
+      {
+        "name": "deleting-entities-80",
+        "entryType": "measure",
+        "startTime": 2021.86899,
+        "duration": 0.7495380000000296
+      },
+      {
+        "name": "deleting-entities-81",
+        "entryType": "measure",
+        "startTime": 2024.159478,
+        "duration": 0.770958999999948
+      },
+      {
+        "name": "deleting-entities-82",
+        "entryType": "measure",
+        "startTime": 2026.487995,
+        "duration": 0.8064030000000457
+      },
+      {
+        "name": "deleting-entities-83",
+        "entryType": "measure",
+        "startTime": 2028.972745,
+        "duration": 0.7490720000000692
+      },
+      {
+        "name": "deleting-entities-84",
+        "entryType": "measure",
+        "startTime": 2031.336676,
+        "duration": 0.7189860000000863
+      },
+      {
+        "name": "deleting-entities-85",
+        "entryType": "measure",
+        "startTime": 2034.799446,
+        "duration": 0.7486320000000433
+      },
+      {
+        "name": "deleting-entities-86",
+        "entryType": "measure",
+        "startTime": 2037.064291,
+        "duration": 0.7480860000000575
+      },
+      {
+        "name": "deleting-entities-87",
+        "entryType": "measure",
+        "startTime": 2039.35173,
+        "duration": 0.7219089999998687
+      },
+      {
+        "name": "deleting-entities-88",
+        "entryType": "measure",
+        "startTime": 2041.657603,
+        "duration": 0.7527209999998377
+      },
+      {
+        "name": "deleting-entities-89",
+        "entryType": "measure",
+        "startTime": 2043.939862,
+        "duration": 0.7580500000001393
+      },
+      {
+        "name": "deleting-entities-90",
+        "entryType": "measure",
+        "startTime": 2046.239628,
+        "duration": 0.7186669999998685
+      },
+      {
+        "name": "deleting-entities-91",
+        "entryType": "measure",
+        "startTime": 2048.525513,
+        "duration": 0.7390249999998559
+      },
+      {
+        "name": "deleting-entities-92",
+        "entryType": "measure",
+        "startTime": 2050.824593,
+        "duration": 0.7456959999999526
+      },
+      {
+        "name": "deleting-entities-93",
+        "entryType": "measure",
+        "startTime": 2053.125565,
+        "duration": 0.7562870000001567
+      },
+      {
+        "name": "deleting-entities-94",
+        "entryType": "measure",
+        "startTime": 2056.407227,
+        "duration": 0.7219449999997778
+      },
+      {
+        "name": "deleting-entities-95",
+        "entryType": "measure",
+        "startTime": 2058.675215,
+        "duration": 0.7303989999995792
+      },
+      {
+        "name": "deleting-entities-96",
+        "entryType": "measure",
+        "startTime": 2060.928096,
+        "duration": 0.7299189999998816
+      },
+      {
+        "name": "deleting-entities-97",
+        "entryType": "measure",
+        "startTime": 2063.193468,
+        "duration": 0.7172989999999118
+      },
+      {
+        "name": "deleting-entities-98",
+        "entryType": "measure",
+        "startTime": 2065.494849,
+        "duration": 0.7385380000000623
+      },
+      {
+        "name": "deleting-entities-99",
+        "entryType": "measure",
+        "startTime": 2067.795203,
+        "duration": 0.7175330000000031
+      }
+    ]
+  },
+  "ENTITIES_QUERY": {
+    "params": {
+      "entityAmount": 1000
+    },
+    "avg": 0.042932850000033794,
+    "min": 0.01442799999995259,
+    "minIndex": 84,
+    "max": 0.13625200000024051,
+    "maxIndex": 13,
+    "report": [
+      {
+        "name": "querying-entities-0",
+        "entryType": "measure",
+        "startTime": 2070.442474,
+        "duration": 0.09857499999998254
+      },
+      {
+        "name": "querying-entities-1",
+        "entryType": "measure",
+        "startTime": 2071.548007,
+        "duration": 0.05487300000004325
+      },
+      {
+        "name": "querying-entities-2",
+        "entryType": "measure",
+        "startTime": 2072.58186,
+        "duration": 0.04513400000041656
+      },
+      {
+        "name": "querying-entities-3",
+        "entryType": "measure",
+        "startTime": 2073.612144,
+        "duration": 0.05212099999971542
+      },
+      {
+        "name": "querying-entities-4",
+        "entryType": "measure",
+        "startTime": 2074.929424,
+        "duration": 0.06337299999995594
+      },
+      {
+        "name": "querying-entities-5",
+        "entryType": "measure",
+        "startTime": 2078.092631,
+        "duration": 0.06215299999985291
+      },
+      {
+        "name": "querying-entities-6",
+        "entryType": "measure",
+        "startTime": 2079.14713,
+        "duration": 0.04448800000000119
+      },
+      {
+        "name": "querying-entities-7",
+        "entryType": "measure",
+        "startTime": 2080.149794,
+        "duration": 0.043254000000160886
+      },
+      {
+        "name": "querying-entities-8",
+        "entryType": "measure",
+        "startTime": 2082.014359,
+        "duration": 0.09696900000017195
+      },
+      {
+        "name": "querying-entities-9",
+        "entryType": "measure",
+        "startTime": 2083.923027,
+        "duration": 0.10213599999997314
+      },
+      {
+        "name": "querying-entities-10",
+        "entryType": "measure",
+        "startTime": 2085.90166,
+        "duration": 0.1055740000001606
+      },
+      {
+        "name": "querying-entities-11",
+        "entryType": "measure",
+        "startTime": 2087.783976,
+        "duration": 0.09074099999997998
+      },
+      {
+        "name": "querying-entities-12",
+        "entryType": "measure",
+        "startTime": 2089.73121,
+        "duration": 0.10443600000007791
+      },
+      {
+        "name": "querying-entities-13",
+        "entryType": "measure",
+        "startTime": 2091.789323,
+        "duration": 0.13625200000024051
+      },
+      {
+        "name": "querying-entities-14",
+        "entryType": "measure",
+        "startTime": 2093.815126,
+        "duration": 0.08724500000016633
+      },
+      {
+        "name": "querying-entities-15",
+        "entryType": "measure",
+        "startTime": 2095.711638,
+        "duration": 0.08377899999959482
+      },
+      {
+        "name": "querying-entities-16",
+        "entryType": "measure",
+        "startTime": 2097.635788,
+        "duration": 0.08676900000000387
+      },
+      {
+        "name": "querying-entities-17",
+        "entryType": "measure",
+        "startTime": 2099.521028,
+        "duration": 0.07672699999966426
+      },
+      {
+        "name": "querying-entities-18",
+        "entryType": "measure",
+        "startTime": 2101.021553,
+        "duration": 0.04500999999982014
+      },
+      {
+        "name": "querying-entities-19",
+        "entryType": "measure",
+        "startTime": 2102.152494,
+        "duration": 0.04301500000019587
+      },
+      {
+        "name": "querying-entities-20",
+        "entryType": "measure",
+        "startTime": 2103.238129,
+        "duration": 0.04866900000024543
+      },
+      {
+        "name": "querying-entities-21",
+        "entryType": "measure",
+        "startTime": 2104.289575,
+        "duration": 0.04160500000034517
+      },
+      {
+        "name": "querying-entities-22",
+        "entryType": "measure",
+        "startTime": 2105.372889,
+        "duration": 0.04539599999998245
+      },
+      {
+        "name": "querying-entities-23",
+        "entryType": "measure",
+        "startTime": 2107.91011,
+        "duration": 0.05120699999997669
+      },
+      {
+        "name": "querying-entities-24",
+        "entryType": "measure",
+        "startTime": 2108.941734,
+        "duration": 0.040473999999903754
+      },
+      {
+        "name": "querying-entities-25",
+        "entryType": "measure",
+        "startTime": 2109.961019,
+        "duration": 0.040635000000293076
+      },
+      {
+        "name": "querying-entities-26",
+        "entryType": "measure",
+        "startTime": 2110.95551,
+        "duration": 0.0371210000002975
+      },
+      {
+        "name": "querying-entities-27",
+        "entryType": "measure",
+        "startTime": 2111.986831,
+        "duration": 0.044030000000020664
+      },
+      {
+        "name": "querying-entities-28",
+        "entryType": "measure",
+        "startTime": 2113.008632,
+        "duration": 0.0417130000000725
+      },
+      {
+        "name": "querying-entities-29",
+        "entryType": "measure",
+        "startTime": 2114.11845,
+        "duration": 0.04628099999990809
+      },
+      {
+        "name": "querying-entities-30",
+        "entryType": "measure",
+        "startTime": 2115.14473,
+        "duration": 0.041274000000157685
+      },
+      {
+        "name": "querying-entities-31",
+        "entryType": "measure",
+        "startTime": 2116.16987,
+        "duration": 0.04406799999969735
+      },
+      {
+        "name": "querying-entities-32",
+        "entryType": "measure",
+        "startTime": 2117.302252,
+        "duration": 0.10223799999994299
+      },
+      {
+        "name": "querying-entities-33",
+        "entryType": "measure",
+        "startTime": 2118.48908,
+        "duration": 0.050095000000055734
+      },
+      {
+        "name": "querying-entities-34",
+        "entryType": "measure",
+        "startTime": 2119.604845,
+        "duration": 0.049777000000176486
+      },
+      {
+        "name": "querying-entities-35",
+        "entryType": "measure",
+        "startTime": 2120.659354,
+        "duration": 0.04441399999996065
+      },
+      {
+        "name": "querying-entities-36",
+        "entryType": "measure",
+        "startTime": 2121.865207,
+        "duration": 0.0533860000000459
+      },
+      {
+        "name": "querying-entities-37",
+        "entryType": "measure",
+        "startTime": 2122.96936,
+        "duration": 0.044033000000126776
+      },
+      {
+        "name": "querying-entities-38",
+        "entryType": "measure",
+        "startTime": 2124.009103,
+        "duration": 0.04320400000005975
+      },
+      {
+        "name": "querying-entities-39",
+        "entryType": "measure",
+        "startTime": 2125.152361,
+        "duration": 0.09701900000027308
+      },
+      {
+        "name": "querying-entities-40",
+        "entryType": "measure",
+        "startTime": 2126.422267,
+        "duration": 0.04592899999988731
+      },
+      {
+        "name": "querying-entities-41",
+        "entryType": "measure",
+        "startTime": 2128.734055,
+        "duration": 0.11730800000032104
+      },
+      {
+        "name": "querying-entities-42",
+        "entryType": "measure",
+        "startTime": 2130.528774,
+        "duration": 0.11361000000033528
+      },
+      {
+        "name": "querying-entities-43",
+        "entryType": "measure",
+        "startTime": 2132.073306,
+        "duration": 0.10244600000032733
+      },
+      {
+        "name": "querying-entities-44",
+        "entryType": "measure",
+        "startTime": 2133.45624,
+        "duration": 0.040425000000141154
+      },
+      {
+        "name": "querying-entities-45",
+        "entryType": "measure",
+        "startTime": 2134.461254,
+        "duration": 0.03944600000022547
+      },
+      {
+        "name": "querying-entities-46",
+        "entryType": "measure",
+        "startTime": 2135.487059,
+        "duration": 0.039060999999946944
+      },
+      {
+        "name": "querying-entities-47",
+        "entryType": "measure",
+        "startTime": 2136.508251,
+        "duration": 0.039064999999936845
+      },
+      {
+        "name": "querying-entities-48",
+        "entryType": "measure",
+        "startTime": 2137.546343,
+        "duration": 0.04046999999991385
+      },
+      {
+        "name": "querying-entities-49",
+        "entryType": "measure",
+        "startTime": 2138.548232,
+        "duration": 0.09083599999985381
+      },
+      {
+        "name": "querying-entities-50",
+        "entryType": "measure",
+        "startTime": 2139.715216,
+        "duration": 0.06142599999975573
+      },
+      {
+        "name": "querying-entities-51",
+        "entryType": "measure",
+        "startTime": 2140.876702,
+        "duration": 0.04383899999993446
+      },
+      {
+        "name": "querying-entities-52",
+        "entryType": "measure",
+        "startTime": 2141.955811,
+        "duration": 0.036516000000119675
+      },
+      {
+        "name": "querying-entities-53",
+        "entryType": "measure",
+        "startTime": 2143.088695,
+        "duration": 0.040750000000116415
+      },
+      {
+        "name": "querying-entities-54",
+        "entryType": "measure",
+        "startTime": 2144.190466,
+        "duration": 0.036635999999816704
+      },
+      {
+        "name": "querying-entities-55",
+        "entryType": "measure",
+        "startTime": 2145.583036,
+        "duration": 0.08194700000012745
+      },
+      {
+        "name": "querying-entities-56",
+        "entryType": "measure",
+        "startTime": 2147.387657,
+        "duration": 0.027158999999755906
+      },
+      {
+        "name": "querying-entities-57",
+        "entryType": "measure",
+        "startTime": 2148.474831,
+        "duration": 0.02501299999994444
+      },
+      {
+        "name": "querying-entities-58",
+        "entryType": "measure",
+        "startTime": 2149.548281,
+        "duration": 0.02364800000032119
+      },
+      {
+        "name": "querying-entities-59",
+        "entryType": "measure",
+        "startTime": 2152.019887,
+        "duration": 0.03092900000001464
+      },
+      {
+        "name": "querying-entities-60",
+        "entryType": "measure",
+        "startTime": 2153.047661,
+        "duration": 0.021486000000095373
+      },
+      {
+        "name": "querying-entities-61",
+        "entryType": "measure",
+        "startTime": 2154.131939,
+        "duration": 0.025675000000319415
+      },
+      {
+        "name": "querying-entities-62",
+        "entryType": "measure",
+        "startTime": 2155.309313,
+        "duration": 0.023451999999906548
+      },
+      {
+        "name": "querying-entities-63",
+        "entryType": "measure",
+        "startTime": 2156.309022,
+        "duration": 0.022942000000057305
+      },
+      {
+        "name": "querying-entities-64",
+        "entryType": "measure",
+        "startTime": 2157.420316,
+        "duration": 0.020208999999795196
+      },
+      {
+        "name": "querying-entities-65",
+        "entryType": "measure",
+        "startTime": 2158.513511,
+        "duration": 0.020067999999810127
+      },
+      {
+        "name": "querying-entities-66",
+        "entryType": "measure",
+        "startTime": 2159.593867,
+        "duration": 0.018501000000014756
+      },
+      {
+        "name": "querying-entities-67",
+        "entryType": "measure",
+        "startTime": 2160.667267,
+        "duration": 0.019616000000041822
+      },
+      {
+        "name": "querying-entities-68",
+        "entryType": "measure",
+        "startTime": 2161.640668,
+        "duration": 0.01519800000005489
+      },
+      {
+        "name": "querying-entities-69",
+        "entryType": "measure",
+        "startTime": 2162.435146,
+        "duration": 0.016305999999985943
+      },
+      {
+        "name": "querying-entities-70",
+        "entryType": "measure",
+        "startTime": 2163.229212,
+        "duration": 0.01637799999980416
+      },
+      {
+        "name": "querying-entities-71",
+        "entryType": "measure",
+        "startTime": 2164.015206,
+        "duration": 0.016301000000112253
+      },
+      {
+        "name": "querying-entities-72",
+        "entryType": "measure",
+        "startTime": 2164.795703,
+        "duration": 0.014713000000028842
+      },
+      {
+        "name": "querying-entities-73",
+        "entryType": "measure",
+        "startTime": 2165.701345,
+        "duration": 0.01804500000025655
+      },
+      {
+        "name": "querying-entities-74",
+        "entryType": "measure",
+        "startTime": 2166.540437,
+        "duration": 0.017045999999936612
+      },
+      {
+        "name": "querying-entities-75",
+        "entryType": "measure",
+        "startTime": 2167.3891,
+        "duration": 0.0175480000002608
+      },
+      {
+        "name": "querying-entities-76",
+        "entryType": "measure",
+        "startTime": 2168.188199,
+        "duration": 0.016009999999823776
+      },
+      {
+        "name": "querying-entities-77",
+        "entryType": "measure",
+        "startTime": 2170.333653,
+        "duration": 0.020485000000007858
+      },
+      {
+        "name": "querying-entities-78",
+        "entryType": "measure",
+        "startTime": 2171.143572,
+        "duration": 0.01519800000005489
+      },
+      {
+        "name": "querying-entities-79",
+        "entryType": "measure",
+        "startTime": 2171.923403,
+        "duration": 0.014474000000063825
+      },
+      {
+        "name": "querying-entities-80",
+        "entryType": "measure",
+        "startTime": 2172.694577,
+        "duration": 0.0149039999996603
+      },
+      {
+        "name": "querying-entities-81",
+        "entryType": "measure",
+        "startTime": 2173.498575,
+        "duration": 0.014865000000099826
+      },
+      {
+        "name": "querying-entities-82",
+        "entryType": "measure",
+        "startTime": 2174.268849,
+        "duration": 0.016526999999769032
+      },
+      {
+        "name": "querying-entities-83",
+        "entryType": "measure",
+        "startTime": 2175.045271,
+        "duration": 0.015441999999893596
+      },
+      {
+        "name": "querying-entities-84",
+        "entryType": "measure",
+        "startTime": 2175.81052,
+        "duration": 0.01442799999995259
+      },
+      {
+        "name": "querying-entities-85",
+        "entryType": "measure",
+        "startTime": 2176.58461,
+        "duration": 0.014649000000190426
+      },
+      {
+        "name": "querying-entities-86",
+        "entryType": "measure",
+        "startTime": 2177.399911,
+        "duration": 0.017576000000190106
+      },
+      {
+        "name": "querying-entities-87",
+        "entryType": "measure",
+        "startTime": 2178.186253,
+        "duration": 0.016595000000052096
+      },
+      {
+        "name": "querying-entities-88",
+        "entryType": "measure",
+        "startTime": 2178.97186,
+        "duration": 0.017414999999800784
+      },
+      {
+        "name": "querying-entities-89",
+        "entryType": "measure",
+        "startTime": 2179.766033,
+        "duration": 0.014693999999963125
+      },
+      {
+        "name": "querying-entities-90",
+        "entryType": "measure",
+        "startTime": 2180.543239,
+        "duration": 0.016939999999976862
+      },
+      {
+        "name": "querying-entities-91",
+        "entryType": "measure",
+        "startTime": 2181.339314,
+        "duration": 0.01642500000025393
+      },
+      {
+        "name": "querying-entities-92",
+        "entryType": "measure",
+        "startTime": 2182.133536,
+        "duration": 0.015321000000312779
+      },
+      {
+        "name": "querying-entities-93",
+        "entryType": "measure",
+        "startTime": 2182.922964,
+        "duration": 0.017259000000194646
+      },
+      {
+        "name": "querying-entities-94",
+        "entryType": "measure",
+        "startTime": 2183.723686,
+        "duration": 0.016629000000193628
+      },
+      {
+        "name": "querying-entities-95",
+        "entryType": "measure",
+        "startTime": 2184.515834,
+        "duration": 0.015173000000231696
+      },
+      {
+        "name": "querying-entities-96",
+        "entryType": "measure",
+        "startTime": 2186.595385,
+        "duration": 0.016992999999729363
+      },
+      {
+        "name": "querying-entities-97",
+        "entryType": "measure",
+        "startTime": 2187.374515,
+        "duration": 0.014948999999887747
+      },
+      {
+        "name": "querying-entities-98",
+        "entryType": "measure",
+        "startTime": 2188.138412,
+        "duration": 0.01445899999998801
+      },
+      {
+        "name": "querying-entities-99",
+        "entryType": "measure",
+        "startTime": 2188.90327,
+        "duration": 0.016669000000092637
+      }
+    ]
+  }
+}

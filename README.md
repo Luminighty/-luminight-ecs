@@ -12,15 +12,15 @@ const world = new World()
 // Components
 
 @Component("PlayerComponent")
-class PlayerComponent {}
+class Player {}
 
 @Component("PositionComponent")
-class PositionComponent { x = 0; y = 0 }
+class Position { x = 0; y = 0 }
 
-// Entity
+// EntityId
 const player = world.createEntity(
-	new PlayerComponent(),
-	new PositionComponent()
+	new Player(),
+	new Position()
 )
 
 // System
@@ -32,15 +32,40 @@ world.addSystem((world) => {
 
 // player: PlayerComponent
 // position: PositionComponent
-for (const [player, position] of world.query(PlayerComponent, PositionComponent)) {
+// entity: EntityId
+for (const [player, position, entity] of world.query(Player, Position, Entities)) {
 	console.log("Player's position: ", position)
 }
 ```
 
+### Querying
+
+Querying for entities is as easy as calling `world.query`
+
+With an LSP turned on, you will also have the advantages of knowing the type of the components. In the example `sprite` will have the type of `Sprite`, while `position` will have the type of `Position`
+
+```js
+for (const [sprite, position] of world.query(Sprite, Position)) {
+	// Render that sprite at position
+}
+```
+
+In cases where we also need to work with the entities, we can use the `Entities` keyword in the query
+```js
+for (const [entity, health] of world.query(Entities, Health)) {
+	if (health.hp <= 0) {
+		world.addComponent(entity, new Fainted())
+		
+		// Or
+
+		world.deleteEntity(entity)
+	}
+}
+```
 
 ### Components
 
-Defining a class as a component defines a static `COMPONENT_ID` field, ahat is then used as a key for the component type. This is to ensure that the typing system still works on obfuscated release built code.
+Defining a class as a component defines a static `COMPONENT_ID` field, that is then used as a key for the component type. This is to ensure that the typing system still works on obfuscated release built code.
 
 ```ts
 @Component("PositionComponent")
@@ -67,7 +92,11 @@ Component("FooComponent")(FooComponent) // JS "decorator"
 
 ```ts
 world.createEntity(
-	// Component list
+	// Components list
+	new Position(x, y)
+	new Sprite("@"),
+	new Health(10),
+	new Player(),
 )
 ```
 
@@ -131,5 +160,3 @@ function UpdateSystem(world: World) {
 	})
 }
 ```
-
-**TODO**: Dependencies might require a decorator, similarly to how Components do

@@ -5,15 +5,16 @@ import { Entity, EntityId } from "./entity";
 export class EntityContainer {
 	nextId = IdGenerator();
 	entities: Record<EntityId, Entity> = {}
+	toDelete: EntityId[] = []
 
 	create(components: IComponent[]) {
 		const id = this.nextId();
 		const entity = new Entity(id);
 
-		components.forEach((c) => {
-			c.parent = id
-			entity.components[c.constructor[COMPONENT_ID]] = c
-		})
+		for (let i = 0; i < components.length; i++) {
+			const component = components[i];
+			entity.components[component.constructor[COMPONENT_ID]] = component
+		}
 
 		this.entities[id] = entity;
 
@@ -24,11 +25,20 @@ export class EntityContainer {
 		return this.entities[id]
 	}
 
-	delete(entity: Entity) {
-		delete this.entities[entity.uuid]
+	delete(entity: EntityId) {
+		this.toDelete.push(entity)
 	}
 
 	length() {
 		return Object.values(this.entities).length
 	}
+
+	maintain() {
+		for (let i = 0; i < this.toDelete.length; i++) {
+			const id = this.toDelete[i];
+			delete this.entities[id]
+		}
+		this.toDelete = []
+	}
+	
 }
