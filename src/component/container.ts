@@ -99,7 +99,6 @@ export class ComponentContainer {
 	maintain(entities: EntityContainer) {
 		if (!this.dirty)
 			return
-
 		for (const id in this.toDelete) {
 			const set = this.toDelete[id]
 			if (set.size == 0)
@@ -108,11 +107,12 @@ export class ComponentContainer {
 			
 			for (let i = 0; i < removed.length; i++) {
 				const entityId = removed[i][0];
-				delete entities.entities[entityId].components[id]
+				entities.entities[entityId].removeComponent(id)
 			}
 
 			set.clear()
 		}
+		this.dirty = false
 	}
 
 }

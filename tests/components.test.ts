@@ -43,7 +43,6 @@ test("removing components", () => {
 
 	expect(world.hasComponent(player, Position)).toBe(false)
 	expect(world.hasComponent(player, Player)).toBe(true)
-
 })
 
 

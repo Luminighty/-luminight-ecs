@@ -5,18 +5,18 @@
  */
 export function filterInPlace<T>(array: Array<T>, predicate: (value: T) => boolean): Array<T> {
 	let j = 0
+	const removed: Array<T> = []
 
 	for (let i = 0; i < array.length; i++) {
 		if (predicate(array[i])) {
 			array[j] = array[i]
 			j++
+		} else {
+			removed[removed.length] = array[i]
 		}
 	}
-	
-	let removed: Array<T> = Array(array.length - j)
-	let i = 0
 	while (j < array.length) {
-		removed[i++] = array.pop()!
+		array.pop()!;
 	}
 	return removed
 }

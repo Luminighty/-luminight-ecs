@@ -1,10 +1,14 @@
 import { World, Component } from "../src"
+import { EntityId } from "../src/entity";
 
 @Component("Player")
 class Player { }
 
 @Component("Position")
 class Position { x = 0; y = 0 }
+
+@Component("Foo")
+class Foo { }
 
 
 test("creating entity", () => {
@@ -90,3 +94,51 @@ test("One component per type", () => {
 	expect(world.addComponent(player, other)).toBe(position)
 })
 
+
+test("deleting entity complex", () => {
+	const world = new World();
+	
+	const positions = [
+		new Position(),
+		new Position(),
+		new Position(),
+		new Position(),
+		new Position(),
+	]
+	const deletePosition = new Position()
+	const playerComponent = new Player()
+	const player = world.createEntity(
+		playerComponent,
+		positions[0]
+	)
+	const others: Array<EntityId> = []
+	others[1] = world.createEntity(
+		new Foo(),
+		positions[1]
+	)
+	const toDelete = world.createEntity(
+		new Foo(),
+		deletePosition
+	)
+	for (let i = 2; i < positions.length; i++) {
+		others[i] = world.createEntity(
+			new Foo(),
+			positions[i]
+		)
+	}
+
+	world.deleteEntity(toDelete)
+	expect(world.components.toDelete["Position"].has(deletePosition)).toBe(true)
+	for (const position of positions) {
+		expect(world.components.toDelete["Position"].has(position)).toBe(false)
+	}
+	world.maintain()
+	expect(world.entities.get(player).components["Position"]).toBe(positions[0])
+	expect(world.entities.get(player).components["Player"]).toBe(playerComponent)
+
+	expect(world.entities.get(others[1]).components["Position"]).toBe(positions[1])
+	expect(world.entities.get(others[2]).components["Position"]).toBe(positions[2])
+	expect(world.entities.get(others[3]).components["Position"]).toBe(positions[3])
+	expect(world.entities.get(others[4]).components["Position"]).toBe(positions[4])
+	
+})

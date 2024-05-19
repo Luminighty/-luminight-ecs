@@ -22,4 +22,8 @@ export class Entity {
 		return Boolean(this.components[componentType.COMPONENT_ID!])
 	}
 
+	removeComponent(componentTypeId: string) {
+		delete this.components[componentTypeId]
+	}
+
 }
