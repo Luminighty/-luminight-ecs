@@ -16,11 +16,12 @@ const entity = world.createEntity(
 	new PlayerComponent(),
 	new PositionComponent()
 )
-console.log(entity)
+console.log({entity})
 
-for (const [entity, player] of world.query(Entities, PositionComponent, PlayerComponent)) {
-	
+for (const [entity, position, player] of world.query(Entities, PositionComponent, PlayerComponent)) {
+	console.log({entity, position, player});
 }
+console.log("after query");
 
 const prototypes = new PrototypeRegistry();
 

@@ -77,12 +77,13 @@ export class ComponentContainer {
 				let component
 				if (type === Entities) {
 					component = entity.uuid
+					components[typeIdx] = component
 				} else {
 					component = entity.getComponent(type)
+					if (!component) // break early if component not found
+						continue entityLoop
+					components[typeIdx] = component
 				}
-				if (!component) // break early if component not found
-					continue entityLoop
-				components[typeIdx] = component
 			}
 			
 			res[j] = components as ComponentTypeTuple<T>

@@ -87,3 +87,20 @@ test("querying components", () => {
 		expect(entities).toEqual([[posAEntity], [playerEntity], [posCEntity]])
 	}
 })
+
+test("dummy test", () => {
+	const world = new World();
+
+	const position = new Position()
+	const player = new Player()
+	const entity = world.createEntity(
+		new Position(),
+		new Player()
+	)
+
+	expect(world.query(Position, Player)).toStrictEqual([[position, player]])
+	expect(world.query(Player, Position)).toStrictEqual([[player, position]])
+	expect(world.query(Entities)).toStrictEqual([[entity]])
+	expect(world.query(Entities, Position)).toStrictEqual([[entity, position]])
+	expect(world.query(Position, Entities)).toStrictEqual([[position, entity]])
+})
